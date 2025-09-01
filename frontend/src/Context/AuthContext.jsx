@@ -1,7 +1,7 @@
 import React, { createContext, useState } from "react";
 export const authDataContext = createContext();
 function AuthContext({ children }) {
-  const serverUrl = "https://airbnb-clone-backend-2jmi.onrender.com";
+  const serverUrl = "https://airbnb-clone-backend-pcad.onrender.com";
 
   let [loading, setLoading] = useState(false);
 
