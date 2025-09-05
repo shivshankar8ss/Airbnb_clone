@@ -124,7 +124,7 @@ Airbnb_clone/
 │
 └── .gitignore
 
-
+```
 
 ## 📌 API Routes
 
