@@ -7,29 +7,30 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 text-gray-700 mt-10 border-t">
-      <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+    <footer className="bg-gradient-to-br from-gray-800 via-gray-900 to-black text-gray-300 mt-10">
+      {/* Top Section */}
+      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
         {/* About */}
         <div>
-          <h3 className="font-semibold mb-3">About</h3>
+          <h3 className="font-semibold text-white mb-4 text-lg">About</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:text-red-500 transition">
                 How Airbnb Works
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:text-red-500 transition">
                 Newsroom
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:text-red-500 transition">
                 Investors
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:text-red-500 transition">
                 Airbnb Plus
               </a>
             </li>
@@ -38,25 +39,25 @@ export default function Footer() {
 
         {/* Community */}
         <div>
-          <h3 className="font-semibold mb-3">Community</h3>
+          <h3 className="font-semibold text-white mb-4 text-lg">Community</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:text-red-500 transition">
                 Diversity & Belonging
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:text-red-500 transition">
                 Accessibility
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:text-red-500 transition">
                 Invite Friends
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:text-red-500 transition">
                 Gift Cards
               </a>
             </li>
@@ -65,25 +66,25 @@ export default function Footer() {
 
         {/* Hosting */}
         <div>
-          <h3 className="font-semibold mb-3">Hosting</h3>
+          <h3 className="font-semibold text-white mb-4 text-lg">Hosting</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:text-red-500 transition">
                 Try Hosting
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:text-red-500 transition">
                 AirCover for Hosts
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:text-red-500 transition">
                 Explore Resources
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:text-red-500 transition">
                 Community Forum
               </a>
             </li>
@@ -92,25 +93,25 @@ export default function Footer() {
 
         {/* Support */}
         <div>
-          <h3 className="font-semibold mb-3">Support</h3>
+          <h3 className="font-semibold text-white mb-4 text-lg">Support</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:text-red-500 transition">
                 Help Center
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:text-red-500 transition">
                 Cancellation Options
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:text-red-500 transition">
                 Safety Information
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#" className="hover:text-red-500 transition">
                 Report a Concern
               </a>
             </li>
@@ -118,25 +119,37 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-gray-200">
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>
+          <p className="text-gray-400">
             © {new Date().getFullYear()} Airbnb Clone, Inc. · Privacy · Terms ·
             Sitemap
           </p>
-          <div className="flex space-x-4 mt-3 md:mt-0">
-            <a href="#" className="hover:text-gray-900">
-              <FaFacebookF />
+          <div className="flex space-x-3 mt-3 md:mt-0">
+            <a
+              href="#"
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-700 hover:bg-red-600 transition"
+            >
+              <FaFacebookF className="text-white" />
             </a>
-            <a href="#" className="hover:text-gray-900">
-              <FaTwitter />
+            <a
+              href="#"
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-700 hover:bg-red-600 transition"
+            >
+              <FaTwitter className="text-white" />
             </a>
-            <a href="#" className="hover:text-gray-900">
-              <FaInstagram />
+            <a
+              href="#"
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-700 hover:bg-red-600 transition"
+            >
+              <FaInstagram className="text-white" />
             </a>
-            <a href="#" className="hover:text-gray-900">
-              <FaLinkedinIn />
+            <a
+              href="#"
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-700 hover:bg-red-600 transition"
+            >
+              <FaLinkedinIn className="text-white" />
             </a>
           </div>
         </div>

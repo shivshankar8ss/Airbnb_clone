@@ -1,28 +1,49 @@
-import React, { useContext, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaArrowLeftLong } from "react-icons/fa6";
-import { userDataContext } from '../Context/UserContext';
-import Card from '../Component/Card';
+import { userDataContext } from "../Context/UserContext";
+import Card from "../Component/Card";
 
 function MyListing() {
-    let navigate = useNavigate()
-    let {userData}= useContext(userDataContext)
-    
-    
+  let navigate = useNavigate();
+  let { userData } = useContext(userDataContext);
+
   return (
-    <div className='w-[100vw] min-h-[100vh] flex items-center justify-start flex-col gap-[50px] relative  px-[20px]'>
-        <div className='w-[50px] h-[50px] bg-[red] cursor-pointer absolute top-[10%] left-[20px] rounded-[50%] flex items-center justify-center ' onClick={()=>navigate("/")}><FaArrowLeftLong className='w-[25px] h-[25px] text-[white]' /></div>
-        <div className='w-[60%] h-[10%] border-[2px] border-[#908c8c] p-[15px] flex items-center justify-center text-[30px] rounded-md text-[#613b3b] font-semibold  mt-[50px] md:w-[600px] text-nowrap'>MY LISTING</div>
-        <div className='w-[100%] h-[90%] flex items-center justify-center gap-[25px] flex-wrap mt-[30px] '>
-        {userData.listing.map((list)=>(
-              <Card title={list.title} landMark={list.landMark} city={list.city} image1={list.image1} image2={list.image2} image3={list.image3} rent={list.rent} id={list._id} isBooked={list.isBooked} ratings={list.ratings} host={list.host}/>
-             ))}
+    <div className="w-full min-h-screen flex flex-col items-center gap-10 relative px-5 bg-gradient-to-br from-gray-100 via-white to-gray-200">
+      {/* Back Button */}
+      <div
+        className="w-12 h-12 bg-white shadow-md hover:shadow-lg cursor-pointer absolute top-10 left-5 rounded-full flex items-center justify-center border border-gray-300 transition"
+        onClick={() => navigate("/")}
+      >
+        <FaArrowLeftLong className="w-6 h-6 text-gray-700" />
+      </div>
 
-        </div>
+      {/* Title */}
+      <div className="mt-20 text-center text-3xl md:text-4xl font-semibold text-gray-800 tracking-wide">
+        My Listings
+      </div>
 
-      
+      {/* Listing Grid */}
+      <div className="w-full max-w-6xl flex flex-wrap gap-6 justify-center pb-20">
+        {userData.listing.map((list, idx) => (
+          <Card
+            key={idx}
+            title={list.title}
+            landMark={list.landMark}
+            city={list.city}
+            image1={list.image1}
+            image2={list.image2}
+            image3={list.image3}
+            rent={list.rent}
+            id={list._id}
+            isBooked={list.isBooked}
+            ratings={list.ratings}
+            host={list.host}
+          />
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
-export default MyListing
+export default MyListing;
